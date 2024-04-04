@@ -99,6 +99,14 @@
                     "required": false
                 },
                 {
+                    "code":"tausc",
+                    "title": "Amplified Speaker Scored",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "min": 0,
+                    "required": false
+                },
+                {
                     "code": "ausc",
                     "title": "Speaker Scored",
                     "type": "counter",
