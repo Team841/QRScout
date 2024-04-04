@@ -1,4 +1,5 @@
-import { Logo } from './Logo';
+//import BioLogo from "../assets/RedHawkRobotics-logo.svg"
+import {Logo} from "./Logo"
 
 export function Footer() {
   return (
