@@ -76,6 +76,17 @@
             "name": "Autonomous",
             "fields": [
                 {
+                    "title" : "Starting position",
+                    "code" : "strtpos",
+                    "type" : "select",
+                    "choices" : {
+                        "A" : "AMP",
+                        "B" : "Speaker",
+                        "C" : "Stage",
+                        "D" : "Source"
+                    }
+                },
+                {
                     "title": "Mobility",
                     "type": "boolean",
                     "defaultValue": false,
@@ -91,22 +102,6 @@
                     "required": false
                 },
                 {
-                    "code": "auampm",
-                    "title": "Amp Missed",
-                    "type": "counter",
-                    "defaultValue": 0,
-                    "min": 0,
-                    "required": false
-                },
-                {
-                    "code":"tausc",
-                    "title": "Amplified Speaker Scored",
-                    "type": "counter",
-                    "defaultValue": 0,
-                    "min": 0,
-                    "required": false
-                },
-                {
                     "code": "ausc",
                     "title": "Speaker Scored",
                     "type": "counter",
@@ -115,16 +110,8 @@
                     "required": false
                 },
                 {
-                    "code": "auskpm",
-                    "title": "Speaker Missed",
-                    "type": "counter",
-                    "defaultValue": 0,
-                    "min": 0,
-                    "required": false
-                },
-                {
-                    "code": "auf",
-                    "title": "Auto Foul",
+                    "code": "miss",
+                    "title": "Missed note",
                     "type": "counter",
                     "defaultValue": 0,
                     "min": 0,
@@ -136,23 +123,8 @@
             "name": "Teleop",
             "fields": [
                 {
-                    "code": "tcoop",
-                    "title": "Coopertition",
-                    "type": "boolean",
-                    "defaultValue": false,
-                    "required": false
-                },
-                {
                     "code": "tamps",
                     "title": "Amp Scored",
-                    "type": "counter",
-                    "defaultValue": 0,
-                    "min": 0,
-                    "required": false
-                },
-                {
-                    "code": "tampm",
-                    "title": "Amp Missed",
                     "type": "counter",
                     "defaultValue": 0,
                     "min": 0,
@@ -175,8 +147,8 @@
                     "required": false
                 },
                 {
-                    "code": "tsm",
-                    "title": "Speaker Missed",
+                    "code": "amn",
+                    "title": "Missed note",
                     "type": "counter",
                     "defaultValue": 0,
                     "min": 0,
