@@ -57,24 +57,12 @@
                     "code": "teamNumber"
                 },
                 {
-                    "title": "Human Player at Amp",
-                    "type": "boolean",
-                    "required": false,
-                    "defaultValue": false,
-                    "code": "humanPlayer"
-                },
-                {
                     "title": "No Show",
                     "type": "boolean",
                     "defaultValue": false,
                     "required": false,
                     "code": "noShow"
-                }
-            ]
-        },
-        {
-            "name": "Autonomous",
-            "fields": [
+                },
                 {
                     "title" : "Starting position",
                     "code" : "strtpos",
@@ -87,7 +75,12 @@
                     },
                     "defaultValue" : "Speaker",
                     "required": true
-                },
+                }
+            ]
+        },
+        {
+            "name": "Autonomous",
+            "fields": [
                 {
                     "title": "Mobility",
                     "type": "boolean",
