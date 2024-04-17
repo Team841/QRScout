@@ -84,7 +84,9 @@
                         "B" : "Speaker",
                         "C" : "Stage",
                         "D" : "Source"
-                    }
+                    },
+                    "defaultValue" : "Speaker",
+                    "required": true
                 },
                 {
                     "title": "Mobility",
