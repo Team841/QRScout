@@ -7,21 +7,6 @@
         "name": "Prematch",
         "fields": [
           {
-            "title": "Event",
-            "type": "select",
-            "required": true,
-            "code": "event",
-            "choices": {
-              "CCC": "CCC",
-              "CG": "CG",
-              "MTTD": "MTTD",
-              "CHCH": "CHEZY",
-              "SSSD": "SSSD",
-              "EBR": "EBR",
-              "EH": "EH"
-            }
-          },
-          {
             "title": "Scouter Initials",
             "type": "text",
             "required": true,
@@ -70,8 +55,7 @@
             "choices": {
               "A": "AMP",
               "B": "Speaker",
-              "C": "Stage",
-              "D": "Source"
+              "C": "Source"
             },
             "defaultValue": "Speaker",
             "required": true
@@ -149,6 +133,7 @@
             "min": 0,
             "required": false
           },
+          
           {
             "code": "amn",
             "title": "Missed note",
@@ -210,31 +195,6 @@
       {
         "name": "Postmatch",
         "fields": [
-          {
-            "code": "or",
-            "title": "Offense Skill",
-            "type": "select",
-            "choices": {
-              "1": "Not Effective",
-              "2": "Average",
-              "3": "Very Effective",
-              "x": "Not Observed"
-            },
-            "required": false
-          },
-          {
-            "code": "dr",
-            "title": "Defense Skill",
-            "type": "select",
-            "choices": {
-              "1": "Not Effective",
-              "2": "Average",
-              "3": "Very Effective",
-              "x": "Not Observed"
-            },
-            "defaultValue": "x",
-            "required": false
-          },
           {
             "code": "d",
             "title": "Died",
