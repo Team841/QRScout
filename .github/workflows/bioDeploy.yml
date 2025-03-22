@@ -36,3 +36,6 @@ jobs:
           path: './dist'
 
       # Step 6: Deploy step or additional tasks (add as necessary)
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
