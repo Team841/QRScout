@@ -162,17 +162,17 @@
     },
     {
       "name": "Endgame",
-      "preserveDataOnReset": false,
+      "preserveDataOnReset": true,
       "fields": [
         {
           "code": "Climb",
           "title": "Climb",
           "type": "select",
           "choices": {
-            "None": "None",
-            "Park": "Parked",
-            "Shallow": "Shallow",
-            "Deep": "Deep"
+            "N": "None",
+            "P": "Parked",
+            "S": "Shallow",
+            "D": "Deep"
           }
         }
       ]
