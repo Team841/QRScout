@@ -169,10 +169,10 @@
           "title": "Climb",
           "type": "select",
           "choices": {
-            "N": "None",
-            "P": "Parked",
-            "S": "Shallow",
-            "D": "Deep"
+            "0": "None",
+            "2": "Parked",
+            "6": "Shallow",
+            "12": "Deep"
           }
         }
       ]
