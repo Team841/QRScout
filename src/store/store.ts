@@ -43,7 +43,7 @@ export const useQRScoutState = createStore<QRScoutState>(
   initialState,
   'qrScout',
   {
-    version: 1,
+    version: 2,
   },
 );
 
