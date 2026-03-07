@@ -79,6 +79,15 @@
         },
         "max": {
           "type": "number"
+        },
+        "steps": {
+          "type": "array",
+          "items": { "type": "number" },
+          "description": "Increment values rendered as separate buttons. Replaces the +/- pair with one button per step plus a -1 correction button."
+        },
+        "autoIncrementOnReset": {
+          "type": "boolean",
+          "description": "If true, the field value will be incremented by 1 each time the form is reset."
         }
       },
       "required": ["title", "type", "required", "code"],

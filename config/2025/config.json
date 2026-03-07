@@ -1,0 +1,143 @@
+{
+  "$schema": "../schema.json",
+  "title": "QRScout",
+  "page_title": "2026 Season",
+  "sections": [
+    {
+      "name": "Prematch",
+      "preserveDataOnReset": true,
+      "fields": [
+        {
+          "title": "Scouter Initials",
+          "type": "text",
+          "required": true,
+          "preserveDataOnReset": true,
+          "code": "scouter"
+        },
+        {
+          "title": "Match Number",
+          "type": "number",
+          "required": true,
+          "code": "matchNumber",
+          "preserveDataOnReset": true,
+          "autoIncrementOnReset": true
+        },
+        {
+          "title": "Robot",
+          "type": "select",
+          "required": true,
+          "preserveDataOnReset": true,
+          "code": "robot",
+          "choices": {
+            "R1": "Red 1",
+            "R2": "Red 2",
+            "R3": "Red 3",
+            "B1": "Blue 1",
+            "B2": "Blue 2",
+            "B3": "Blue 3"
+          },
+          "defaultValue": "R1"
+        },
+        {
+          "title": "Team Number",
+          "type": "number",
+          "required": true,
+          "code": "teamNumber"
+        }
+      ]
+    },
+    {
+      "name": "Autonomous",
+      "preserveDataOnReset": false,
+      "fields": [
+        {
+          "code": "aBalls",
+          "title": "Balls Scored",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false,
+          "steps": [1, 3, 5]
+        }
+      ]
+    },
+    {
+      "name": "Teleop",
+      "preserveDataOnReset": false,
+      "fields": [
+        {
+          "code": "tBalls",
+          "title": "Balls Scored",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false,
+          "steps": [1, 3, 5]
+        }
+      ]
+    },
+    {
+      "name": "Endgame",
+      "preserveDataOnReset": false,
+      "fields": [
+        {
+          "code": "endgame",
+          "title": "Endgame",
+          "type": "select",
+          "required": false,
+          "choices": {
+            "None": "None"
+          },
+          "defaultValue": "None"
+        }
+      ]
+    },
+    {
+      "name": "Postmatch",
+      "preserveDataOnReset": false,
+      "fields": [
+        {
+          "code": "Dth",
+          "title": "Died/Tipped Over",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "Fouls",
+          "title": "Foul",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },
+        {
+          "code": "Card",
+          "title": "Yellow/Red Card",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "RGFlag",
+          "title": "Red/Green Flag",
+          "type": "select",
+          "choices": {
+            "None": "None",
+            "Red": "Red",
+            "Green": "Green"
+          },
+          "required": false
+        },
+        {
+          "code": "co",
+          "title": "Comments",
+          "type": "text",
+          "min": 0,
+          "max": 300,
+          "required": true
+        }
+      ]
+    }
+  ]
+}
