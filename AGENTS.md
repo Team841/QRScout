@@ -41,4 +41,4 @@ PRs should include:
 1. Screenshots when the UI layout changes.
 
 ## Deployment Notes
-Pushing to `main` automatically deploys to GitHub Pages via `.github/workflows/bioDeploy.yml`. The live URL is `https://frc2713.github.io/QRScout/`. The Vite build uses `/QRScout/` as the base path — do not change this without updating the workflow and GitHub Pages settings.
+Pushing to `main` automatically deploys to GitHub Pages via `.github/workflows/bioDeploy.yml`. The live URL is `https://team841.github.io/QRScout/`. The Vite build uses `/QRScout/` as the base path — do not change this without updating the workflow and GitHub Pages settings.
