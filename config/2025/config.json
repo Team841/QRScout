@@ -243,6 +243,13 @@
           "required": false
         },
         {
+          "code": "roleShootInt",
+          "title": "Shoot While Intaking",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
           "code": "co",
           "title": "Comments",
           "type": "text",

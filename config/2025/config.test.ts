@@ -78,6 +78,7 @@ describe('2025 config', () => {
       ['rolePas', 'Passing'],
       ['roleHerd', 'Herding'],
       ['roleDef', 'Defense'],
+      ['roleShootInt', 'Shoot While Intaking'],
     ])('has a %s role checkbox', (code, title) => {
       const field = postmatch.fields.find(f => f.code === code);
       expect(field).toBeDefined();
