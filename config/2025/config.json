@@ -157,22 +157,6 @@
       ]
     },
     {
-      "name": "Endgame",
-      "preserveDataOnReset": false,
-      "fields": [
-        {
-          "code": "endgame",
-          "title": "Endgame",
-          "type": "select",
-          "required": false,
-          "choices": {
-            "None": "None"
-          },
-          "defaultValue": "None"
-        }
-      ]
-    },
-    {
       "name": "Postmatch",
       "preserveDataOnReset": false,
       "fields": [
