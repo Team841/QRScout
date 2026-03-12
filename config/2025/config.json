@@ -1,7 +1,7 @@
 {
   "$schema": "../schema.json",
   "title": "QRScout",
-  "page_title": "2026 Season",
+  "page_title": "REBUILT",
   "sections": [
     {
       "name": "Prematch",
@@ -43,6 +43,26 @@
           "type": "number",
           "required": true,
           "code": "teamNumber"
+        },
+        {
+          "title": "Set Up Location",
+          "type": "select",
+          "required": false,
+          "code": "setupLoc",
+          "choices": {
+            "": "",
+            "bump": "Bump",
+            "trench": "Trench",
+            "hub": "Hub"
+          },
+          "defaultValue": ""
+        },
+        {
+          "title": "No Show",
+          "type": "boolean",
+          "required": false,
+          "code": "noShow",
+          "defaultValue": false
         }
       ]
     },
