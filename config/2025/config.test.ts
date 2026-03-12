@@ -62,6 +62,17 @@ describe('2025 config', () => {
     });
   });
 
+  describe('Postmatch section', () => {
+    const postmatch = config.sections.find(s => s.name === 'Postmatch')!;
+
+    it('has a Robot Broke checkbox defaulting to false', () => {
+      const field = postmatch.fields.find(f => f.code === 'broke');
+      expect(field).toBeDefined();
+      expect(field!.type).toBe('boolean');
+      expect(field!.defaultValue).toBe(false);
+    });
+  });
+
   describe('Teleop section', () => {
     it('has a Missed Shots counter', () => {
       const field = teleop.fields.find(f => f.code === 'tMiss');

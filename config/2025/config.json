@@ -183,6 +183,13 @@
       "preserveDataOnReset": false,
       "fields": [
         {
+          "code": "broke",
+          "title": "Robot Broke",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
           "code": "Dth",
           "title": "Died/Tipped Over",
           "type": "boolean",
