@@ -78,18 +78,26 @@ describe('ConfigEditor', () => {
     expect(onCancel).toHaveBeenCalledOnce();
   });
 
-  it('Save button is disabled when Monaco reports validation errors', () => {
+  it('Save button is disabled when Monaco reports error-severity markers', () => {
     render(<ConfigEditor />);
     act(() => {
-      capturedCallbacks.onValidate?.([{ message: 'Unexpected token' }]);
+      capturedCallbacks.onValidate?.([{ message: 'Unexpected token', severity: 8 }]);
     });
     expect(screen.getByRole('button', { name: /save/i })).toBeDisabled();
+  });
+
+  it('Save button is NOT disabled for warning-severity markers', () => {
+    render(<ConfigEditor />);
+    act(() => {
+      capturedCallbacks.onValidate?.([{ message: 'Schema warning', severity: 4 }]);
+    });
+    expect(screen.getByRole('button', { name: /save/i })).not.toBeDisabled();
   });
 
   it('Save button re-enables after validation errors are cleared', () => {
     render(<ConfigEditor />);
     act(() => {
-      capturedCallbacks.onValidate?.([{ message: 'Unexpected token' }]);
+      capturedCallbacks.onValidate?.([{ message: 'Unexpected token', severity: 8 }]);
     });
     act(() => {
       capturedCallbacks.onValidate?.([]);

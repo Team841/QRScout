@@ -24,7 +24,7 @@ export function ConfigEditor(props: ConfigEditorProps) {
       schemas: [
         {
           uri: '../../config/schema.json',
-          fileMatch: ['*'],
+          fileMatch: ['*.json'],
           schema,
         },
       ],
@@ -35,11 +35,13 @@ export function ConfigEditor(props: ConfigEditorProps) {
       <div className="flex flex-col gap-2 h-full shadow-md p-2 rounded-lg bg-black-50 bg-opacity-20">
         <div className="flex-grow rounded-lg overflow-clip ">
           <Editor
+            path="config.json"
             defaultLanguage="json"
             defaultValue={JSON.stringify(config, null, 2)}
             theme="vs-dark"
             onValidate={markers => {
-              setErrorCount(markers.length);
+              // Only count actual errors (severity 8); warnings/hints should not block saving
+              setErrorCount(markers.filter(m => m.severity === 8).length);
             }}
             onChange={value => value && setCurrentConfigText(value)}
           />
