@@ -13,7 +13,9 @@ export function ConfigEditor(props: ConfigEditorProps) {
   const monaco = useMonaco();
   const formData = useQRScoutState(state => state.formData);
   const config = useMemo(() => getConfig(), [formData]);
-  const [currentConfigText, setCurrentConfigText] = useState<string>('');
+  const [currentConfigText, setCurrentConfigText] = useState<string>(() =>
+    JSON.stringify(getConfig(), null, 2),
+  );
   const [errorCount, setErrorCount] = useState<number>(0);
 
   useEffect(() => {
