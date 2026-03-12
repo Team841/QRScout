@@ -4,6 +4,7 @@ import CounterInput from './CounterInput';
 import NumberInput from './NumberInput';
 import RangeInput from './RangeInput';
 import SelectInput from './SelectInput';
+import StarRatingInput from './StarRatingInput';
 import StringInput from './StringInput';
 
 export interface ConfigurableInputProps {
@@ -81,6 +82,15 @@ export default function ConfigurableInput(props: ConfigurableInputProps) {
           min={input.min}
           max={input.max}
           defaultValue={input.defaultValue as number}
+          onChange={handleChange}
+          section={props.section}
+        />
+      );
+    case 'rating':
+      return (
+        <StarRatingInput
+          key={input.title}
+          {...input}
           onChange={handleChange}
           section={props.section}
         />

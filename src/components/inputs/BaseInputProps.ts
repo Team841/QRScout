@@ -38,4 +38,5 @@ export type InputTypes =
   | 'range'
   | 'select'
   | 'counter'
-  | 'image';
+  | 'image'
+  | 'rating';

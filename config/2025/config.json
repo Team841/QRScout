@@ -208,6 +208,13 @@
           "required": false
         },
         {
+          "code": "driverSkill",
+          "title": "Driver Skill",
+          "type": "rating",
+          "defaultValue": 0,
+          "required": false
+        },
+        {
           "code": "roleOff",
           "title": "Offense",
           "type": "boolean",

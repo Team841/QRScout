@@ -65,6 +65,13 @@ describe('2025 config', () => {
   describe('Postmatch section', () => {
     const postmatch = config.sections.find(s => s.name === 'Postmatch')!;
 
+    it('has a Driver Skill rating field defaulting to 0', () => {
+      const field = postmatch.fields.find(f => f.code === 'driverSkill');
+      expect(field).toBeDefined();
+      expect(field!.type).toBe('rating');
+      expect(field!.defaultValue).toBe(0);
+    });
+
     it('has a Robot Broke checkbox defaulting to false', () => {
       const field = postmatch.fields.find(f => f.code === 'broke');
       expect(field).toBeDefined();
