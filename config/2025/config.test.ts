@@ -71,6 +71,20 @@ describe('2025 config', () => {
       expect(field!.type).toBe('boolean');
       expect(field!.defaultValue).toBe(false);
     });
+
+    it.each([
+      ['roleOff', 'Offense'],
+      ['roleCyc', 'Cycling'],
+      ['rolePas', 'Passing'],
+      ['roleHerd', 'Herding'],
+      ['roleDef', 'Defense'],
+    ])('has a %s role checkbox', (code, title) => {
+      const field = postmatch.fields.find(f => f.code === code);
+      expect(field).toBeDefined();
+      expect(field!.type).toBe('boolean');
+      expect(field!.title).toBe(title);
+      expect(field!.defaultValue).toBe(false);
+    });
   });
 
   describe('Teleop section', () => {
