@@ -11,24 +11,19 @@ describe('2025 config', () => {
   });
 
   describe('Prematch section', () => {
-    it('has a Set Up Location select field defaulting to empty', () => {
+    it('has a Set Up Location select field that is required and defaults to empty', () => {
       const field = prematch.fields.find(f => f.code === 'setupLoc');
       expect(field).toBeDefined();
       expect(field!.type).toBe('select');
+      expect(field!.required).toBe(true);
       expect(field!.defaultValue).toBe('');
       expect(field!.choices).toMatchObject({
         '': '',
         bump: 'Bump',
         trench: 'Trench',
         hub: 'Hub',
+        noShow: 'No Show',
       });
-    });
-
-    it('has a No Show boolean field defaulting to false', () => {
-      const field = prematch.fields.find(f => f.code === 'noShow');
-      expect(field).toBeDefined();
-      expect(field!.type).toBe('boolean');
-      expect(field!.defaultValue).toBe(false);
     });
   });
 

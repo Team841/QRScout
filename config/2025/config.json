@@ -47,22 +47,16 @@
         {
           "title": "Set Up Location",
           "type": "select",
-          "required": false,
+          "required": true,
           "code": "setupLoc",
           "choices": {
             "": "",
             "bump": "Bump",
             "trench": "Trench",
-            "hub": "Hub"
+            "hub": "Hub",
+            "noShow": "No Show"
           },
           "defaultValue": ""
-        },
-        {
-          "title": "No Show",
-          "type": "boolean",
-          "required": false,
-          "code": "noShow",
-          "defaultValue": false
         }
       ]
     },
