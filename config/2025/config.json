@@ -197,21 +197,6 @@
           "required": false
         },
         {
-          "code": "Fouls",
-          "title": "Foul",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "required": false
-        },
-        {
-          "code": "Card",
-          "title": "Yellow/Red Card",
-          "type": "boolean",
-          "defaultValue": false,
-          "required": false
-        },
-        {
           "code": "RGFlag",
           "title": "Red/Green Flag",
           "type": "select",
